@@ -63,8 +63,8 @@ def read_input_tdcvrptw(filename):
     tokens = read_elem(filename)
     idx = 0
     instance_name = tokens[idx]; idx += 1  # instance name
-    # Skip next 4 tokens.
-    idx += 4
+    # Skip next 3 tokens.
+    idx += 3
     nb_trucks = int(tokens[idx]); idx += 1
     truck_capacity = int(tokens[idx]); idx += 1
     # Skip next 13 tokens.
@@ -113,6 +113,10 @@ def read_input_tdcvrptw(filename):
     distance_depots, travel_time_warehouse = compute_distance_depots(
         depot_x, depot_y, customers_x, customers_y, travel_time_profile_matrix,
         nb_time_intervals, distance_levels, nb_distance_levels)
+    
+    print(nb_customers, nb_trucks, truck_capacity, distance_matrix, travel_time,
+            time_to_matrix_idx, distance_depots, travel_time_warehouse, demands,
+            service_time, earliest_start, latest_end, max_horizon)
     return (nb_customers, nb_trucks, truck_capacity, distance_matrix, travel_time,
             time_to_matrix_idx, distance_depots, travel_time_warehouse, demands,
             service_time, earliest_start, latest_end, max_horizon)
