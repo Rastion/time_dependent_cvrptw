@@ -8,9 +8,9 @@ import os
 def read_elem(filename):
 
     # Resolve relative path with respect to this module’s directory.
-    if not os.path.isabs(instance_file):
+    if not os.path.isabs(filename):
         base_dir = os.path.dirname(os.path.abspath(__file__))
-        instance_file = os.path.join(base_dir, instance_file)
+        filename = os.path.join(base_dir, filename)
 
     with open(filename) as f:
         return f.read().split()
