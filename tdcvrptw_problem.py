@@ -114,9 +114,6 @@ def read_input_tdcvrptw(filename):
         depot_x, depot_y, customers_x, customers_y, travel_time_profile_matrix,
         nb_time_intervals, distance_levels, nb_distance_levels)
     
-    print(nb_customers, nb_trucks, truck_capacity, distance_matrix, travel_time,
-            time_to_matrix_idx, distance_depots, travel_time_warehouse, demands,
-            service_time, earliest_start, latest_end, max_horizon)
     return (nb_customers, nb_trucks, truck_capacity, distance_matrix, travel_time,
             time_to_matrix_idx, distance_depots, travel_time_warehouse, demands,
             service_time, earliest_start, latest_end, max_horizon)

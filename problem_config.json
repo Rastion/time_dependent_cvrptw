@@ -3,8 +3,11 @@
     "default_params": {
       "instance_file": "instances/C101.25.txt"
     },
-    "problem_type": "Time Dependent CVRPTW",
+    "creator": "Rastion",
+    "type": "problem",
+    "problem_name": "Time dependent CVRPTW",
     "description": "In the time-dependent capacitated vehicle routing problem with time windows (TDCVRPTW), a fleet of vehicles (with uniform capacity) must serve customers with known demands and time windows. Travel times between customers depend on the departure time, according to a discretized profile. A candidate solution is given by a partition of customers into truck routes. For each route, the arrival (end) times are computed recursively using the appropriate travel time (selected via a time-to-matrix index mapping), and lateness is measured both at each visit and on return to the depot. The lexicographic objective is to minimize total lateness, then the number of trucks used, and finally the total distance traveled.",
+    "link_to_dataset": "https://github.com/Rastion/time_dependent_cvrptw/blob/main/instances/C101.25.txt",
     "keywords": [
       "CVRPTW",
       "time-dependent",
@@ -29,12 +32,8 @@
       "description": "The objective is computed as: total_lateness + (nb_trucks_used * 1e9) + total_distance, where lateness is the sum of delays beyond the latest allowable end (including a penalty for returning home after the maximum horizon), nb_trucks_used is the number of nonempty routes, and total_distance is the sum of distances traveled (including depot-to-customer legs)."
     },
     "solution_representation": "A list of routes (each route a list of customer indices).",
-    "compatible_optimizers": [
-      "genetic_algorithm",
-      "simulated_annealing",
-      "particle_swarm",
-      "tabu_search",
-      "rl_optimizer"
+    "formulations": [
+      ""
     ]
   }
   
